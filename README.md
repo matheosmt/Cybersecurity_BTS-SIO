@@ -1,2 +1,1 @@
-# Cybersecurity-practical-project-BTS-SIO-
-Cybersecurity practical project with a vulnerable web application.
+The goal of this project is to create a web application (an interface in which a user can write a comment that redirects them to another page where they can see their own comment as well as those of all other users) using vulnerable code. Once the application is deployed locally, the objective is to attack it in order to identify its security flaws, and then improve the application by adding security measures to the code.
