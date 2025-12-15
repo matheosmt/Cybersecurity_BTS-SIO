@@ -1,5 +1,5 @@
-// File to select data from the database and display it to users
 <?php
+// File to select data from the database and display it to users
 
 $host = '127.0.0.1';
 $db = 'DB_name';
@@ -36,9 +36,9 @@ DESC");
         <?php else: ?>
 
             <ul>
-                // If data is displayed without escaping, there will be an XSS vulnerability
+                <! -- If data is displayed without escaping, there will be an XSS vulnerability -- >
                 <?php foreach ($comments as $c): ?>
-                    // Data is displayed with escaping    
+                    <! -- Data is displayed with escaping -- >   
                     <li>
                         <div><?= htmlspecialchars($c['created_at'], ENT_QUOTES, 'UTF-8') ?></div>
                         <div><?= htmlspecialchars($c['content'], ENT_QUOTES, 'UTF-8') ?></div>
