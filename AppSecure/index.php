@@ -1,5 +1,4 @@
-// Creation of a token
-<?php
+<?php // Creation of a token
 session_start();
 
 if (empty($_SESSION['csrf_token'])) {
@@ -8,8 +7,9 @@ if (empty($_SESSION['csrf_token'])) {
 $token = $_SESSION['csrf_token'];
 ?>
 
-// User form
+
 <!doctype html>
+<! -- User form -- >
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -22,7 +22,7 @@ $token = $_SESSION['csrf_token'];
             <label>Message<br>
                 <textarea name="content" rows="5" cols="60" required></textarea>
             </label>
-            // Token stored in session
+            <! -- Token stored in session -- >
             <input type="hidden" name="csrf_token" value="<?= $token ?>">
             <br>
             <button type="submit">Envoyer</button>

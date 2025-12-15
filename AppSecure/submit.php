@@ -1,5 +1,5 @@
-// File to store form data in the database
 <?php
+// File to store form data in the database
 session_start();
 
 $host = '127.0.0.1';
