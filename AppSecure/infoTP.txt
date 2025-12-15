@@ -1,2 +1,0 @@
-Les fichiers ici sont les fichiers de bases du TP de Cyber. Les fichiers du TP
-sécurisés et finis sont dans le /var/www/html/tp-comments/
