@@ -29,7 +29,7 @@ DESC");
     </head>
     <body>
         <h1>Commentaires postés</h1>
-        <p><a href="index.html">Poster un nouveau commentaire</a></p>
+        <p><a href="index.php">Poster un nouveau commentaire</a></p>
 
         <?php if (empty($comments)): ?>
                 <p>Aucun commentaire pour le moment.</p>
