@@ -1,5 +1,6 @@
-File to store form data in the database
+// File to store form data in the database
 <?php
+session_start();
 
 $host = '127.0.0.1';
 $db = 'DB_name';
@@ -9,7 +10,18 @@ $charset = 'utf8mb4';
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    // CSRF verification
+    if (
+        empty($_POST['csrf_token']) || // We ensure that the form has submitted a token
+        empty($_SESSION['csrf_token']) || // We check that the session exists, ensuring that the user went through the form
+        $_POST['csrf_token'] !== $_SESSION['csrf_token'] // We verify that the submitted token matches the stored token
+    ) {
+        die('Requête CSRF détectée');
+    }
+
     $content = $_POST['content'] ?? '';
+
 
     try {
         $pdo = new PDO($dsn, $user, $pass);
