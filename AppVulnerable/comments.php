@@ -36,7 +36,7 @@ try {
 
             <ul>
                 <?php foreach ($comments as $c): ?>
-                    // XSS vulnerability
+                    <! -- XSS vulnerability -- >
                     <li>
                         <div><?= $c['created_at'] ?></div>
                         <div><?= $c['content'] ?></div>
