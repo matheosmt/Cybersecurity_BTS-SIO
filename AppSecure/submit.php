@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         empty($_SESSION['csrf_token']) || // We check that the session exists, ensuring that the user went through the form
         $_POST['csrf_token'] !== $_SESSION['csrf_token'] // We verify that the submitted token matches the stored token
     ) {
-        die('Requête CSRF détectée');
+        die('Token CSRF invalide');
     }
 
     $content = $_POST['content'] ?? '';
